@@ -1,0 +1,37 @@
+{
+  "name": "t1-expressjs-core",
+  "version": "0.1.0",
+  "description": "Core Express.js utilities for microservices",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./middleware": "./src/middleware/index.js",
+    "./utils": "./src/utils/index.js",
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelmartinezt1/t1-expressjs-core.git"
+  },
+  "keywords": [
+    "express",
+    "microservices",
+    "middleware"
+  ],
+  "author": "Juan Angel Martinez",
+  "license": "MIT",
+  "private": true,
+  "peerDependencies": {
+    "express": ">=4.21.2"
+  },
+  "devDependencies": {
+    "express": "^4.21.2",
+    "jest": "^29.5.0",
+    "eslint": "^8.40.0"
+  }
+}
