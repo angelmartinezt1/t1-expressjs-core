@@ -1,3 +1,4 @@
+/* globals describe, expect, it */
 import ResponseBuilder from '../src/utils/responseBuilder.js'
 
 describe('ResponseBuilder', () => {

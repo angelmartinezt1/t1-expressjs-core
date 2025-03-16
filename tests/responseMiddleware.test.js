@@ -1,3 +1,4 @@
+/* globals describe, expect, it */
 import express from 'express'
 import request from 'supertest'
 import responseMiddleware from '../src/middleware/responseMiddleware.js'
