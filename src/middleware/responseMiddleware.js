@@ -1,4 +1,4 @@
-export default function responseMiddleware(req, res, next) {
+export default function responseMiddleware (req, res, next) {
   res.sendResponse = (statusCode, message, data = null, pagination = null) => {
     const response = {
       metadata: {
@@ -8,14 +8,14 @@ export default function responseMiddleware(req, res, next) {
         executionTime: null
       },
       data,
-    };
-
-    if (pagination) {
-      response.pagination = pagination;
     }
 
-    res.status(statusCode).json(response);
-  };
+    if (pagination) {
+      response.pagination = pagination
+    }
 
-  next();
+    res.status(statusCode).json(response)
+  }
+
+  next()
 }

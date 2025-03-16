@@ -1,5 +1,5 @@
 export default class ResponseBuilder {
-  static success(message, data = null, pagination = null) {
+  static success (message, data = null, pagination = null) {
     return {
       metadata: {
         success: true,
@@ -9,10 +9,10 @@ export default class ResponseBuilder {
       },
       data,
       pagination
-    };
+    }
   }
 
-  static error(message, statusCode = 500) {
+  static error (message, statusCode = 500) {
     return {
       metadata: {
         success: false,
@@ -22,6 +22,6 @@ export default class ResponseBuilder {
       },
       data: null,
       statusCode
-    };
+    }
   }
 }
