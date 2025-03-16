@@ -1,20 +1,19 @@
 export default function responseMiddleware (req, res, next) {
   res.sendResponse = (statusCode, message, data = null, pagination = null) => {
-    const response = {
-      metadata: {
-        success: statusCode >= 200 && statusCode < 300,
-        message,
-        timestamp: new Date().toISOString(),
-        executionTime: null
-      },
-      data,
+    const metadata = {
+      success: statusCode >= 200 && statusCode < 300,
+      message,
+      timestamp: new Date().toISOString(),
+      executionTime: res.locals.executionTime || '0.00ms'
     }
+
+    const responseBody = { metadata, data }
 
     if (pagination) {
-      response.pagination = pagination
+      responseBody.pagination = pagination
     }
 
-    res.status(statusCode).json(response)
+    res.status(statusCode).json(responseBody)
   }
 
   next()
