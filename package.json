@@ -26,6 +26,9 @@
   "author": "Juan Angel Martinez",
   "license": "MIT",
   "private": true,
+  "eslintConfig": {
+    "extends": "standard"
+  },
   "peerDependencies": {
     "express": ">=4.21.2"
   },
@@ -33,6 +36,7 @@
     "eslint": "^9.22.0",
     "express": "^4.21.2",
     "jest": "^29.7.0",
+    "neostandard": "^0.12.1",
     "supertest": "^7.0.0"
   }
 }
