@@ -1,7 +1,7 @@
 module.exports = {
   transform: {},
-  testEnvironment: "node",
+  testEnvironment: 'node',
   moduleNameMapper: {
-    "^(\\.{1,2}/.*)\\.js$": "$1",
+    '^(\\.{1,2}/.*)\\.js$': '$1',
   },
-};
+}
