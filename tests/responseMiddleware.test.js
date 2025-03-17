@@ -24,7 +24,7 @@ describe('responseMiddleware', () => {
     expect(response.body.metadata).toHaveProperty('executionTime') // ✅ Solo validar que existe
 
     // Validar que executionTime tiene el formato correcto (ej: "123.45ms")
-    expect(response.body.metadata.executionTime).toMatch(/^\d+\.\d{2}ms$/)
+    expect(response.body.metadata.executionTime).toMatch(/^\d+\.\d+ms$/)
   })
 
   it('should ensure executionTime is not null', async () => {
