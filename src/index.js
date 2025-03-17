@@ -4,7 +4,9 @@ export { default as errorHandlerMiddleware } from './middleware/errorHandlerMidd
 export { default as executionTime, default as executionTimeMiddleware } from './middleware/executionTime.js'
 export { default as notFoundMiddleware } from './middleware/notFoundMiddleware.js'
 export { default as responseMiddleware } from './middleware/responseMiddleware.js'
+export { default as securityMiddleware } from './middleware/securityMiddleware.js'
 export { default as ResponseBuilder } from './utils/responseBuilder.js'
+
 
 
 // También puedes agrupar las exportaciones
